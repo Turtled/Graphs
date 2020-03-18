@@ -69,13 +69,13 @@ class Graph:
         beginning from starting_vertex.
         """
         print(str(starting_vertex))
+        visited.add(vert)
 
         if len(visited) is 0:
             visited.add(str(starting_vertex))
 
         for vert in self.get_neighbors(starting_vertex):
             if vert not in visited:
-                visited.add(vert)
                 self.dft_recursive(vert, visited)
 
     def bfs(self, starting_vertex, destination_vertex):
